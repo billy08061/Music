@@ -1,22 +1,45 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import * as routes from "../../constants/routes";
 
-const Entry = () => {
-  const hello = true;
 
-  if (hello === true) {
+import React, { Component } from 'react';
+
+
+class Entry extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {...}
+    // }
+    state = {
+        Entered: false
+    }
+
+    onClickHandler = () => {
+      this.setState( { Entered: true } );  
+    }
+
+  
+    render() {
+  
+ 
+
+  if (this.state.Entered === false) {
     return (
       <div>
         <h1> Entry Page </h1>
 
         <Link to={routes.LANDING}>
-          <button type="button">ENTER</button>
+          <button onClick= {this.onClickHandler} type="button">ENTER</button>
         </Link>
       </div>
     );
   }
-  return null;
-};
+  
+  return(<div> </div>) 
+
+}
+}
+
 
 export default Entry;
