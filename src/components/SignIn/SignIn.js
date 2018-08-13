@@ -6,16 +6,23 @@ import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 import { PasswordForgetLink } from '../PasswordForget/PasswordForget';
 import Navigation from '../Navigation/Navigation';
+import './SignIn.css'; 
+import avatar from './avatar.png';
+
+
+
+
+
+
+
+
 
 const SignInPage = ({ history }) =>
   <div>
     <Navigation/>
-    <h1>SignIn</h1>
-
     
     <SignInForm history={history} />
-    <PasswordForgetLink />
-    <SignUpLink />
+    
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -69,25 +76,47 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+   
+      
+    <div className = "signIn-background">
+     
+     <div className = "login-box">
+    
+     <img src= {avatar} className="avatar"></img>
+
+     <form onSubmit={this.onSubmit}>
+        
         <input
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
+        
         <input
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
+       <br />
+       <br />
+        <button className ="button" disabled={isInvalid} type="submit" name= "submit" value= "Login">
           Sign In
         </button>
+        
 
         { error && <p>{error.message}</p> }
       </form>
+      <br />
+      <br />
+      <br />
+      <br />
+      <PasswordForgetLink />
+      <br /> 
+    <SignUpLink />
+      </div>
+     </div>
     );
   }
 }

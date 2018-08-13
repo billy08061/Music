@@ -22,7 +22,7 @@ const App = () => (
 )}/>
       
       
-      <Route path={["/entry"]} component={Entry} />
+      <Route exact path={routes.ENTRY} component={Entry} />
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
       <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
