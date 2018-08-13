@@ -18,19 +18,21 @@ import * as routes from '../../constants/routes';
 
 const App = () =>
   <Router>
-    <div>
+  
       
       
-     <Entry/> 
+   
       
-
+<div>
+      <Route path={/^(?!.*landing).*$/} component={Entry} />
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
       <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
       <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
       <Route exact path={routes.HOME} component={() => <HomePage />} />
       <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
-    </div>
+ </div>
+    
   </Router>
 
 export default withAuthentication(App);

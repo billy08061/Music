@@ -70,7 +70,7 @@ const NavigationNonAuth = () =>
       </NavItem>
     </Nav>
   </Navbar.Collapse>
-</Navbar>;
+</Navbar>
 </div>
 
 
