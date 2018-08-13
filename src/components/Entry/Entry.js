@@ -16,7 +16,7 @@ class Entry extends Component {
     }
 
     onClickHandler = () => {
-      this.setState( { Entered: true } );  
+     
     }
 
   

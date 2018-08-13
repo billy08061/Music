@@ -71,6 +71,9 @@ const NavigationNonAuth = () =>
     </Nav>
   </Navbar.Collapse>
 </Navbar>;
+
+
+<h1> Welcome to the Landing Page</h1>
 </div>
 
 
