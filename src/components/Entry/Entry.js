@@ -18,7 +18,7 @@ class Entry extends Component {
      <div className = "entry-body">   
 
         <div className="background-wrap">
-          <video id="video-bg-elm" loop autoPlay>
+          <video id="video-bg-elm" preload ="auto" autoplay ="true" loop ="loop" muted= "muted">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
