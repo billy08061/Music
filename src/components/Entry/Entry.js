@@ -25,18 +25,17 @@ class Entry extends Component {
      <div className = "entry-body">   
 
         <div className="background-wrap">
-          <video id="video-bg-elm" preload ="auto" autoplay ="true" loop ="loop" muted= "muted">
+          <video id="video-bg-elm" preload ="auto" autoPlay ="true" loop ="loop" muted= "muted">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         
-
      
         </div>
 
         <div className = "content"> 
           <h1>  Local EDM, A place to:</h1> 
-          <p> <Typing speed = {70} loop = {true} delay ={500}> 
+          <div className ="paragraph"> <Typing speed = {70} loop = {true} delay ={500}> 
             
             
             
@@ -71,7 +70,7 @@ class Entry extends Component {
          
             
             
-             </p> 
+             </div> 
           
           <br /> 
           

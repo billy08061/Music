@@ -78,7 +78,7 @@ class SignInForm extends Component {
      
      <div className = "login-box">
     
-     <img src= {avatar} className="avatar"></img>
+     <img src= {avatar} className="avatar" alt =""></img>
 
      <form onSubmit={this.onSubmit}>
         
@@ -108,9 +108,8 @@ class SignInForm extends Component {
       <br />
       <br />
       <br />
-      <div className = "forgot-password">
+      
       <PasswordForgetLink />
-      </div> 
       <br /> 
     <SignUpLink />
       </div>

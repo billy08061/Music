@@ -46,13 +46,6 @@
     margin-bottom: 10px; 
 }
 
-.content p {
-    text-align: center; 
-    font-size: 30px; 
-    letter-spacing: 3px; 
-    color: rgba(255, 255, 255, 0.74); 
-
-}
 
 .entry-button {
         
@@ -69,4 +62,11 @@
     align-items: center; 
     display: flex;
     justify-content: center;
+}
+
+.paragraph {
+    text-align: center; 
+    font-size: 30px; 
+    letter-spacing: 3px; 
+    color: rgba(255, 255, 255, 0.74); 
 }

@@ -76,8 +76,13 @@ class SignUpForm extends Component {
       
       <div className = "login-box">
     
-    <img src= {avatar} className="avatar"></img>
 
+    <img src= {avatar} className="avatar" alt ="">
+    
+    
+    </img>
+
+    
       <form onSubmit={this.onSubmit}>
            <input
           value={username}
@@ -110,6 +115,8 @@ class SignUpForm extends Component {
           Sign Up
         </button>
 
+       
+        
         { error && <p>{error.message}</p> }
       </form>
 

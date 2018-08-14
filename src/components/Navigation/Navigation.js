@@ -41,7 +41,7 @@ const NavigationNonAuth = () =>
 <Navbar inverse collapseOnSelect>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="/entry">LocalEDM</a>
+    <Link to={routes.ENTRY}>LocalEDM</Link>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
