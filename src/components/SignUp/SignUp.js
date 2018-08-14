@@ -6,11 +6,12 @@ import {
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
-
+import avatar from './avatar.png';
+import Navigation from '../Navigation/Navigation'; 
 
 const SignUpPage = ({ history }) =>
   <div>
-    <h1>SignUp</h1>
+    <Navigation /> 
     <SignUpForm history={history} />
   </div>
 
@@ -71,6 +72,12 @@ class SignUpForm extends Component {
     username === '';
     
     return (
+      <div className = "signIn-background">
+      
+      <div className = "login-box">
+    
+    <img src= {avatar} className="avatar"></img>
+
       <form onSubmit={this.onSubmit}>
            <input
           value={username}
@@ -96,12 +103,18 @@ class SignUpForm extends Component {
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <br /> 
+        <br /> 
+        
+        <button className = "button" disabled={isInvalid} type="submit">
           Sign Up
         </button>
 
         { error && <p>{error.message}</p> }
       </form>
+
+      </div>
+      </div>
     );
   }
 }

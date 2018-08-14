@@ -13,10 +13,6 @@ import avatar from './avatar.png';
 
 
 
-
-
-
-
 const SignInPage = ({ history }) =>
   <div>
     <Navigation/>
@@ -112,7 +108,9 @@ class SignInForm extends Component {
       <br />
       <br />
       <br />
+      <div className = "forgot-password">
       <PasswordForgetLink />
+      </div> 
       <br /> 
     <SignUpLink />
       </div>
