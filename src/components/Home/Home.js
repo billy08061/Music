@@ -5,7 +5,8 @@ import Navigation from '../Navigation/Navigation';
 
 const HomePage = () =>
   <div>
- <Navigation /> 
+ 
+    <Navigation /> 
   
   
     <h1>Home Page</h1>
