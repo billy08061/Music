@@ -47,20 +47,20 @@ const NavigationNonAuth = () =>
   </Navbar.Header>
   <Navbar.Collapse>
     <Nav>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} >
        
       </NavItem>
-      <NavItem eventKey={2} href="#">
+      <NavItem eventKey={2} >
         
       </NavItem>
       
         
     </Nav>
     <Nav pullRight>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} >
       <Link to={routes.LANDING}>Landing</Link>
       </NavItem>
-      <NavItem eventKey={2} href="#">
+      <NavItem eventKey={2} >
       <Link to={routes.SIGN_IN}>Sign In</Link>
       </NavItem>
     </Nav>

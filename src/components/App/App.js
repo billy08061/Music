@@ -12,7 +12,7 @@ import Entry from "../../components/Entry/Entry";
 
 
 import * as routes from "../../constants/routes";
-
+import 'mapbox-gl/dist/mapbox-gl.css';
 const App = () => (
   <Router>
     <div>
