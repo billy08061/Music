@@ -1,6 +1,5 @@
-svg.us-state-map {
-    
-        height: 100vh;
-        width: 100%;
-        
+.map {
+
+        overflow: hidden; 
+        background-color:  #006699;
 }

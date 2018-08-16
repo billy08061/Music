@@ -7,7 +7,7 @@ const Landing = () => {
   
 
   return (
-    <div>
+    <div className = "scroll-bar">
       <Navigation />
       <MyMap />
     </div>
