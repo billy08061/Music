@@ -14,6 +14,10 @@ class MyMap extends React.Component {
     }
   
 
+    onMapClick = (e) => {
+      console.log("meh")
+  }
+
   NC_Onclick_Handler = () => {
     this.setState({
         
@@ -28,16 +32,33 @@ class MyMap extends React.Component {
         
 
     })
+    
+ 
   
-  }
+}
+
+CloseTagHandler = () => {
+  this.setState ({
+    lat: 38,
+    lng: -95.713,
+    zoom: 4.85,
+    NC_Marker: [35.2, -78.638],
+    display_State_tag: true, 
+    display_NC_tags: false
+  })
+}
+
+
   
   
   render () {
     const position = [this.state.lat, this.state.lng]
    //Rendering NC Marker
-    if(this.state.display_State_tag === true){
+ 
+   
+   if(this.state.display_State_tag === true){
         return(
-          <Map center={position} zoom={this.state.zoom}>
+          <Map center={position} zoom={this.state.zoom} watch = {true}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -59,7 +80,7 @@ class MyMap extends React.Component {
     else if (this.state.display_NC_tags === true){
   
       return(
-        <Map center={position} zoom={this.state.zoom}>
+        <Map center={position} zoom={this.state.zoom} >
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -114,6 +135,9 @@ class MyMap extends React.Component {
 
             {/* Greensville Marker */}
          <Marker onClick = { this.NC_Onclick_Handler } position={[35.6055, -77.3646]} />
+         <Popup onClose = {this.CloseTagHandler} position = {position}>
+            <span> Close NC Tags </span>
+           </Popup>
           
           {/*End of Greensville Marker */}
         
